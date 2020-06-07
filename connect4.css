@@ -1,0 +1,74 @@
+/* game board table */
+
+#game{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+body{
+  background-color: rgb(228, 231, 228)
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#turn {
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+  word-wrap: normal
+
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 2px rgba(5, 5, 5, 0.363);
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid black;
+  animation-name: fall-animation;
+  animation-duration: 725ms;
+}
+
+@keyframes fall-animation {
+  from {
+      transform: translateY(-300px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.p1{
+  background-color: #DF2935
+}
+.p2{
+  background-color: rgba(255, 238, 0, 0.904);
+}
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px rgba(55, 47, 55, 0.336)
+}
+
+#column-top td:hover {
+  background-color: rgba(55, 115, 255, 0.274)
+}
